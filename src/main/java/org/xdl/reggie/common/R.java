@@ -32,7 +32,7 @@ public class R<T> {
         return r;
     }
 
-    public static <T> R<T> error(String msg) {
+    public static R error(String msg) {
         R r = new R();
         r.msg = msg;
         r.code = 0;
