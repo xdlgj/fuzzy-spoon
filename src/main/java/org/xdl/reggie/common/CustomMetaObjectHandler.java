@@ -28,6 +28,7 @@ public class CustomMetaObjectHandler implements MetaObjectHandler {
     public void updateFill(MetaObject metaObject) {
         log.info("更新时自动填充：{}", metaObject.toString());
         metaObject.setValue("updateTime", LocalDateTime.now());
+        metaObject.setValue("updateUser", BaseContext.getCurrentId());
 
     }
 }

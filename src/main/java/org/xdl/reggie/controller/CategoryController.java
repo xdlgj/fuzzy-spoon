@@ -26,6 +26,31 @@ public class CategoryController {
     private final CategoryService categoryService;
 
     /**
+     * 删除分类
+     * @param ids
+     * @return
+     */
+    @DeleteMapping
+    public R<String> delete(Long ids) {
+        log.info("删除分类,id为：{}", ids);
+        //TODO 分类中如果关联有菜品或套餐则不能删除，需要自定义删除功能
+        //categoryService.removeById(id);
+        categoryService.remove(ids);
+        return R.success("删除分类成功");
+    }
+
+    /**
+     * 修改分类信息
+     * @param category
+     * @return
+     */
+    @PutMapping
+    public R<String> update(@RequestBody Category category) {
+        categoryService.updateById(category);
+        return R.success("修改分类信息成功");
+    }
+
+    /**
      * 分页查询分类
      * @param page
      * @param pageSize

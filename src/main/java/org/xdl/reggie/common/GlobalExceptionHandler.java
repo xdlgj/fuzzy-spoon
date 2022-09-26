@@ -30,4 +30,13 @@ public class GlobalExceptionHandler {
         }
         return R.error("未知错误");
     }
+    /**
+     * 业务异常
+     * @return
+     */
+    @ExceptionHandler(CustomException.class)
+    public R<String> exceptionHandler(CustomException ex) {
+        String errMsg = ex.getMessage();
+        return R.error(errMsg);
+    }
 }
