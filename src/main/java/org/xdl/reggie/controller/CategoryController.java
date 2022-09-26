@@ -11,6 +11,8 @@ import org.xdl.reggie.common.R;
 import org.xdl.reggie.entity.Category;
 import org.xdl.reggie.service.CategoryService;
 
+import java.util.List;
+
 /**
  * @RequiredArgsConstructor可以将类中final修饰的或@NoNull修饰的属性，作为参数生成构造方法，
  * 可以代替@Autowired进行依赖注入
@@ -24,6 +26,20 @@ import org.xdl.reggie.service.CategoryService;
 @RestController
 public class CategoryController {
     private final CategoryService categoryService;
+
+    /**
+     * 按照分类类别查询所有分类
+     * @param category
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Category>> list(Category category) {
+        LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(category.getType() != null, Category::getType, category.getType());
+        queryWrapper.orderByAsc(Category::getSort).orderByDesc(Category::getCreateTime);
+        List<Category> list = categoryService.list(queryWrapper);
+        return R.success(list);
+    }
 
     /**
      * 删除分类
