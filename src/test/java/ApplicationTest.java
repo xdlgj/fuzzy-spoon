@@ -11,8 +11,9 @@ public class ApplicationTest {
 
     @Test
     public void testStringSplit() {
-        String str = "Duplicate entry 'zhangsan' for key 'idx_username'";
+        String str = "Duplicate entry 'zhangsan' for key 'idx_username'.png";
         // java.lang.ArrayIndexOutOfBoundsException: 1000
-        System.out.println(str.split(" ")[1000]);
+        //System.out.println(str.split(" ")[1000]);
+        System.out.println(str.substring(str.indexOf(".")));
     }
 }
