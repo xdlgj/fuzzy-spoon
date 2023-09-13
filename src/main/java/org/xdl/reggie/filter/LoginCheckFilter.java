@@ -29,7 +29,13 @@ public class LoginCheckFilter implements Filter {
                 "/employee/login",
                 "/employee/login",
                 "/backend/**",
-                "/front/**"
+                "/front/**",
+                "/swagger-resources/**",
+                "/webjars/**",
+                "/v2/**",
+                "/swagger-ui.html/**",
+                "/employee/**"
+
         };
         // 1、在白名单中的uri执行放行
         if (check(white_uris, requestURI)) {
@@ -52,7 +58,7 @@ public class LoginCheckFilter implements Filter {
     }
 
     /**
-     * 路径匹配，检查本次请求是否需要方向
+     * 路径匹配，检查本次请求是否需要放行
      * @param uris
      * @param requestURI
      * @return

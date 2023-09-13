@@ -2,6 +2,10 @@ package org.xdl.reggie.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +22,16 @@ import java.time.LocalDateTime;
 @Slf4j
 @RestController
 @RequestMapping("/employee")
+@Api(tags = "员工管理")
 public class EmployeeController {
 
-    @Autowired
+    @Autowired // 会去Spring容器中查找类型为EmployeeService类型的bean（对象）；new org.xdl.reggie.service.impl.EmployeeServiceImpl()
     private EmployeeService employeeService;
 
+    @ApiOperation(value = "根据ID获取员工信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id", value = "员工ID")
+    })
     @GetMapping("/{id}")
     public R<Employee> getById(@PathVariable Long id) {
         Employee employee = employeeService.getById(id);
@@ -34,6 +43,7 @@ public class EmployeeController {
 
     /**
      * 根据id修改员工信息
+     *
      * @param employee
      * @return
      */
@@ -49,6 +59,7 @@ public class EmployeeController {
 
     /**
      * 员工信息分页查询
+     *
      * @param page
      * @param pageSize
      * @param name
@@ -71,6 +82,7 @@ public class EmployeeController {
 
     /**
      * 员工登录
+     *
      * @param request
      * @param employee
      * @return
@@ -110,6 +122,7 @@ public class EmployeeController {
 
     /**
      * 新增员工
+     *
      * @param request
      * @param employee
      * @return
