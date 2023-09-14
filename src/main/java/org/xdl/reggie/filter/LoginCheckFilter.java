@@ -32,9 +32,9 @@ public class LoginCheckFilter implements Filter {
                 "/front/**",
                 "/swagger-resources/**",
                 "/webjars/**",
-                "/v2/**",
+                "/v2/api-docs",
                 "/swagger-ui.html/**",
-                "/employee/**"
+                "/doc.html"
 
         };
         // 1、在白名单中的uri执行放行

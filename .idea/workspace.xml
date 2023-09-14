@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d5cfd29-d9ee-4906-b859-21c77fdc245e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-pro.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/common/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/config/SwaggerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/xdl/reggie/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +156,9 @@
       <workItem from="1694518241214" duration="1234000" />
       <workItem from="1694609957704" duration="108000" />
       <workItem from="1694610091305" duration="133000" />
-      <workItem from="1694610407037" duration="6771000" />
+      <workItem from="1694610407037" duration="8554000" />
+      <workItem from="1694652351155" duration="47000" />
+      <workItem from="1694694024464" duration="1245000" />
     </task>
     <servers />
   </component>
